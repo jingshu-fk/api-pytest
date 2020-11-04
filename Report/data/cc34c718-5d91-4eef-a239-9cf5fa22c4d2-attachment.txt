@@ -1,0 +1,3 @@
+INFO     blchpjulyv:test_centre.py:100 执行用例case_014——
+INFO     qovsxvxxlj:dealrely.py:57 用例case_014请求值为{}：
+INFO     blchpjulyv:test_centre.py:110 实际响应为：{'msg': '敏感词不能为空', 'code': 500}

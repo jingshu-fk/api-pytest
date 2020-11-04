@@ -1,0 +1,555 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test_centre",
+    "children" : [ {
+      "name" : "新增一个初审",
+      "uid" : "15de9683bf70cd27",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395759850,
+        "stop" : 1604395760511,
+        "duration" : 661
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'name': '阿路', 'role': 0, 'phone': '17857995703'}", "'case_001'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'审核人员信息-新增'", "1", "'post'", "'/stage-api/deploy/auditmanager'", "'truncate table t_auditmanager'", "'新增一个初审'" ]
+    }, {
+      "name" : "新增一个终审",
+      "uid" : "fb8438ed449524b5",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395760521,
+        "stop" : 1604395760570,
+        "duration" : 49
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'name': '阿知', 'role': 1, 'phone': '13000000001'}", "'case_002'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'审核人员信息-新增'", "0", "'post'", "'/stage-api/deploy/auditmanager'", "None", "'新增一个终审'" ]
+    }, {
+      "name" : "新增敏感词1个字符",
+      "uid" : "56c2fb3f6989837b",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395760582,
+        "stop" : 1604395761251,
+        "duration" : 669
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '舒景平'}", "'case_001'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-冒烟'", "1", "'post'", "'/stage-api/deploy/word'", "'truncate table t_sensitive_word'", "'新增敏感词1个字符'" ]
+    }, {
+      "name" : "新增敏感词20字节中文",
+      "uid" : "90638f1d0fd000ca",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761261,
+        "stop" : 1604395761290,
+        "duration" : 29
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '这个世界上能够好好用'}", "'case_002'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'新增敏感词20字节中文'" ]
+    }, {
+      "name" : "新增敏感词20字节英文",
+      "uid" : "e8b0980a508d0a76",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761300,
+        "stop" : 1604395761327,
+        "duration" : 27
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': 'DDGEJjkdjeghzhHFKAHG'}", "'case_003'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'新增敏感词20字节英文'" ]
+    }, {
+      "name" : "新增敏感词20字节数字",
+      "uid" : "b2e6cf8fd290aa94",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761338,
+        "stop" : 1604395761363,
+        "duration" : 25
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '33333333333333333222'}", "'case_004'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'新增敏感词20字节数字'" ]
+    }, {
+      "name" : "已经存在的敏感词",
+      "uid" : "ccf33c34a038c5cd",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761373,
+        "stop" : 1604395761386,
+        "duration" : 13
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '33333333333333333222'}", "'case_005'", "None", "{}", "{'msg': '33333333333333333222 敏感词已存在', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'已经存在的敏感词'" ]
+    }, {
+      "name" : "敏感词为空",
+      "uid" : "2892b029a7d69ea5",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761397,
+        "stop" : 1604395761435,
+        "duration" : 38
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': ''}", "'case_006'", "None", "{}", "{'msg': '敏感词不能为空', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'敏感词为空'" ]
+    }, {
+      "name" : "敏感词参数不填",
+      "uid" : "62dd007003efcb70",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761445,
+        "stop" : 1604395761456,
+        "duration" : 11
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{}", "'case_007'", "None", "{}", "{'msg': '敏感词不能为空', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'敏感词参数不填'" ]
+    }, {
+      "name" : "修改敏感词为1个字符",
+      "uid" : "32ea76ae43b97a27",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761466,
+        "stop" : 1604395761499,
+        "duration" : 33
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'id': 301, 'sensitiveWord': '马'}", "'case_008'", "'id'", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "1", "'put'", "'/stage-api/deploy/word'", "'select id from t_sensitive_word where sensitive_word = '这个世界上能够好好用''", "'修改敏感词为1个字符'" ]
+    }, {
+      "name" : "修改敏感词为20字节中文",
+      "uid" : "7859cde78c9aa6ed",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761508,
+        "stop" : 1604395761534,
+        "duration" : 26
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '应急下发测试短信请及'}", "'case_009'", "None", "{'case_008': ['$.id'], 'body': 1}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "0", "'put'", "'/stage-api/deploy/word'", "None", "'修改敏感词为20字节中文'" ]
+    }, {
+      "name" : "修改敏感词20字节英文",
+      "uid" : "3c46103fa890d7b4",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761544,
+        "stop" : 1604395761569,
+        "duration" : 25
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': 'VGNVJfhbhrjehFHKVNKR'}", "'case_010'", "None", "{'case_008': ['$.id'], 'body': 1}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "0", "'put'", "'/stage-api/deploy/word'", "None", "'修改敏感词20字节英文'" ]
+    }, {
+      "name" : "修改敏感词20字节数字",
+      "uid" : "a1860016f47e3be2",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761581,
+        "stop" : 1604395761599,
+        "duration" : 18
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '31333730303030303030'}", "'case_011'", "None", "{'case_008': ['$.id'], 'body': 1}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "0", "'put'", "'/stage-api/deploy/word'", "None", "'修改敏感词20字节数字'" ]
+    }, {
+      "name" : "修改敏感词为已存在的",
+      "uid" : "979b4c27486845c9",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761609,
+        "stop" : 1604395761619,
+        "duration" : 10
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': '舒景平'}", "'case_012'", "None", "{'case_008': ['$.id'], 'body': 1}", "{'msg': '舒景平 敏感词已存在', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "0", "'put'", "'/stage-api/deploy/word'", "None", "'修改敏感词为已存在的'" ]
+    }, {
+      "name" : "修改敏感词为空",
+      "uid" : "adeaa97cd8538e0d",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761629,
+        "stop" : 1604395761640,
+        "duration" : 11
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'sensitiveWord': ''}", "'case_013'", "None", "{'case_008': ['$.id'], 'body': 1}", "{'msg': '敏感词不能为空', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "0", "'put'", "'/stage-api/deploy/word'", "None", "'修改敏感词为空'" ]
+    }, {
+      "name" : "敏感词参数不填",
+      "uid" : "c889e39d65e81992",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761649,
+        "stop" : 1604395761661,
+        "duration" : 12
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{}", "'case_014'", "None", "{}", "{'msg': '敏感词不能为空', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "0", "'put'", "'/stage-api/deploy/word'", "None", "'敏感词参数不填'" ]
+    }, {
+      "name" : "信息录入-冒烟",
+      "uid" : "856c8c5d74ff6efc",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395761671,
+        "stop" : 1604395761960,
+        "duration" : 289
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'XHKX_DZ_CDX', 'beginsTime': '2020-08-05T01:57:00.000Z', 'engTime': '2020-08-05T07:57:00.000Z', 'areas': '570', 'content': '冒烟测试流程5'}", "'case_001'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入'", "1", "'post'", "'/stage-api/message/task'", "'truncate table T_MESSAGE_TASK'", "'信息录入-冒烟'" ]
+    }, {
+      "name" : "messageCode不正确",
+      "uid" : "b4c7c0e28040df04",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395761970,
+        "stop" : 1604395762002,
+        "duration" : 32
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'PWJFJ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '577', 'content': '22222222'}", "'case_002'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-MessageCode'", "0", "'post'", "'/stage-api/message/task'", "None", "'messageCode不正确'" ]
+    }, {
+      "name" : "messageCode参数值为空",
+      "uid" : "70be5927f86bcf7e",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762065,
+        "stop" : 1604395762092,
+        "duration" : 27
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': '', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '577', 'content': '22222222'}", "'case_003'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-MessageCode'", "0", "'post'", "'/stage-api/message/task'", "None", "'messageCode参数值为空'" ]
+    }, {
+      "name" : "messgageCode参数不填",
+      "uid" : "37e7751023f1412d",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762108,
+        "stop" : 1604395762132,
+        "duration" : 24
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '577', 'content': '22222222'}", "'case_004'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-MessageCode'", "0", "'post'", "'/stage-api/message/task'", "None", "'messgageCode参数不填'" ]
+    }, {
+      "name" : "areas不在570-580",
+      "uid" : "24c64d5178f2fe1",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762147,
+        "stop" : 1604395762174,
+        "duration" : 27
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'XHKX_DZK', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '581', 'content': '177777777'}", "'case_005'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas不在570-580'" ]
+    }, {
+      "name" : "areas11个",
+      "uid" : "74256224a68f142f",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762190,
+        "stop" : 1604395762219,
+        "duration" : 29
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '570,571,572,573,574,575,576,577,578,579,580', 'content': '9999999999'}", "'case_006'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas11个'" ]
+    }, {
+      "name" : "areas=570",
+      "uid" : "1b981ac1883b2f19",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762229,
+        "stop" : 1604395762252,
+        "duration" : 23
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '570', 'content': '蜀黍'}", "'case_007'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas=570'" ]
+    }, {
+      "name" : "areas=580",
+      "uid" : "dda0ee5c48691003",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762282,
+        "stop" : 1604395762306,
+        "duration" : 24
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '580', 'content': '肥羊'}", "'case_008'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas=580'" ]
+    }, {
+      "name" : "不选地区",
+      "uid" : "2f2817f252226c1e",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762318,
+        "stop" : 1604395762343,
+        "duration" : 25
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '', 'content': '不选地区'}", "'case_009'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'不选地区'" ]
+    }, {
+      "name" : "areas参数不填",
+      "uid" : "775115cc1521036",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762358,
+        "stop" : 1604395762410,
+        "duration" : 52
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'content': 'areas参数不填'}", "'case_010'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas参数不填'" ]
+    }, {
+      "name" : "content1字符中文",
+      "uid" : "92d79c941ad5689c",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762425,
+        "stop" : 1604395762451,
+        "duration" : 26
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': '舒'}", "'case_011'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content1字符中文'" ]
+    }, {
+      "name" : "content1字符英文",
+      "uid" : "429b953706acd1ed",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762461,
+        "stop" : 1604395762503,
+        "duration" : 42
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': 'd'}", "'case_012'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content1字符英文'" ]
+    }, {
+      "name" : "content1字符数字",
+      "uid" : "b08dfd4cdaa55a5e",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762513,
+        "stop" : 1604395762533,
+        "duration" : 20
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': '3'}", "'case_013'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content1字符数字'" ]
+    }, {
+      "name" : "content70字符中文",
+      "uid" : "7e97aeb7c35c15a0",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762543,
+        "stop" : 1604395762563,
+        "duration" : 20
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '574', 'content': '新昌气象台时发布：今天夜里到明天阴有时有雨，偏北风到级，温度后天阴到多云。桐庐:今天夜里到明天阴有小雨，东北风级，明天气温桐庐气象发布到明天'}", "'case_014'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content70字符中文'" ]
+    }, {
+      "name" : "content70字符英文",
+      "uid" : "7aafc834a5e21a02",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762578,
+        "stop" : 1604395762600,
+        "duration" : 22
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '575', 'content': 'JVGNVJfhbhrjehFHKVNKRFifeklofeppvNJCEJFJUHhfvnuehCJJECEJFJUHhfveklofep'}", "'case_015'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content70字符英文'" ]
+    }, {
+      "name" : "content70字符数字",
+      "uid" : "33bfef201de0f684",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762610,
+        "stop" : 1604395762655,
+        "duration" : 45
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '576', 'content': '5555555555555557777777777777777777777772222222222222222200000006666666'}", "'case_016'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content70字符数字'" ]
+    }, {
+      "name" : "content70字符中英数字混合",
+      "uid" : "63b25fefdd568258",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762664,
+        "stop" : 1604395762683,
+        "duration" : 19
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '579', 'content': '新昌气象台时发布24jj有时有雨kfkennfnfeerttccccccc温度后天阴到多云3333333333333332222222221'}", "'case_017'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content70字符中英数字混合'" ]
+    }, {
+      "name" : "content含有敏感词",
+      "uid" : "64b7a607cc0d138e",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762694,
+        "stop" : 1604395762706,
+        "duration" : 12
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': '舒景平'}", "'case_018'", "None", "{}", "{'msg': '存在敏感词:舒景平', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content含有敏感词'" ]
+    }, {
+      "name" : "content含有敏感词，中间加空格",
+      "uid" : "687228821464f501",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762719,
+        "stop" : 1604395762732,
+        "duration" : 13
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': '舒  景平'}", "'case_019'", "None", "{}", "{'msg': '存在敏感词:舒景平', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content含有敏感词，中间加空格'" ]
+    }, {
+      "name" : "content为空",
+      "uid" : "e150cdafa1f056dd",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762742,
+        "stop" : 1604395762765,
+        "duration" : 23
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': ''}", "'case_020'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content为空'" ]
+    }, {
+      "name" : "content参数不填",
+      "uid" : "5c748243eaf8cd03",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1604395762783,
+        "stop" : 1604395762803,
+        "duration" : 20
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '575'}", "'case_021'", "None", "{}", "{'msg': 'null', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content参数不填'" ]
+    }, {
+      "name" : "content包含特殊字符",
+      "uid" : "8025719ec78cdb91",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762820,
+        "stop" : 1604395762838,
+        "duration" : 18
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '575', 'content': '2fk~/?$~!'}", "'case_022'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content包含特殊字符'" ]
+    }, {
+      "name" : "信息录入",
+      "uid" : "cd6327215b1cc65b",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762849,
+        "stop" : 1604395762869,
+        "duration" : 20
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'messageCode': 'XHKX_DZK', 'beginsTime': '2020-08-12T01:44:00.000Z', 'engTime': '2020-08-12T10:43:00.000Z', 'areas': '573', 'content': '8月22日测试下发'}", "'case_001'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'业务流程'", "0", "'post'", "'/stage-api/message/task'", "'truncate table T_MESSAGE_TASK'", "'信息录入'" ]
+    }, {
+      "name" : "初审",
+      "uid" : "86d7ea60da80b83e",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395762880,
+        "stop" : 1604395763126,
+        "duration" : 246
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "[{'taskId': 2243, 'name': '阿路', 'phone': '17857995703', 'role': 0, 'taskContent': '8月22日测试下发'}]", "'case_002'", "'taskId'", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "None", "1", "'post'", "'/stage-api/message/reply'", "'select id from T_MESSAGE_TASK'", "'初审'" ]
+    }, {
+      "name" : "终审",
+      "uid" : "4dddea6f5fbb8f8e",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395763137,
+        "stop" : 1604395763198,
+        "duration" : 61
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "[{'taskId': 2243, 'name': '阿知', 'phone': '13000000001', 'role': 1, 'taskContent': '8月22日测试下发'}]", "'case_003'", "'taskId'", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "None", "1", "'post'", "'/stage-api/message/reply'", "'select id from T_MESSAGE_TASK'", "'终审'" ]
+    }, {
+      "name" : "发布",
+      "uid" : "c06f761fdf1443ad",
+      "parentUid" : "67eae18f1ecc5f62a73b1a0354187c5b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1604395763208,
+        "stop" : 1604395763247,
+        "duration" : 39
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'id': 2243, 'status': 4, 'codeInfo': ['XHKX_DZK'], 'pushTasksCode': 'XHKX_DZK', 'content': '8月22日测试下发'}", "'case_004'", "'id'", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "None", "1", "'put'", "'/stage-api/message/task/updateStatus'", "'select id from T_MESSAGE_TASK'", "'发布'" ]
+    } ],
+    "uid" : "67eae18f1ecc5f62a73b1a0354187c5b"
+  } ]
+}

@@ -1,0 +1,181 @@
+{
+  "uid" : "32ea76ae43b97a27",
+  "name" : "修改敏感词为1个字符",
+  "fullName" : "test_centre.TestApiAuto#test_main",
+  "historyId" : "f31a7ae29c0706b778d17c28bfef1c26",
+  "time" : {
+    "start" : 1604395761466,
+    "stop" : 1604395761499,
+    "duration" : 33
+  },
+  "description" : "敏感词维护-修改",
+  "descriptionHtml" : "<p>敏感词维护-修改</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "敏感词维护-修改",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理数据依赖，修改body",
+      "time" : {
+        "start" : 1604395761467,
+        "stop" : 1604395761470,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，得到响应",
+      "time" : {
+        "start" : 1604395761470,
+        "stop" : 1604395761498,
+        "duration" : 28
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "与预期结果比较断言",
+      "time" : {
+        "start" : 1604395761498,
+        "stop" : 1604395761498,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "保存响应结果",
+      "time" : {
+        "start" : 1604395761498,
+        "stop" : 1604395761498,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "898d56d6e76f5edf",
+      "name" : "log",
+      "source" : "898d56d6e76f5edf.txt",
+      "type" : "text/plain",
+      "size" : 260
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "新华快讯项目"
+  }, {
+    "name" : "suite",
+    "value" : "test_centre"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "sms-pc"
+  }, {
+    "name" : "thread",
+    "value" : "15100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_centre"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "body",
+    "value" : "{'id': 301, 'sensitiveWord': '马'}"
+  }, {
+    "name" : "case_id",
+    "value" : "'case_008'"
+  }, {
+    "name" : "change_word",
+    "value" : "'id'"
+  }, {
+    "name" : "depend",
+    "value" : "{}"
+  }, {
+    "name" : "excepted",
+    "value" : "{'msg': '操作成功', 'code': 200}"
+  }, {
+    "name" : "header",
+    "value" : "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}"
+  }, {
+    "name" : "header_change",
+    "value" : "'Authorization'"
+  }, {
+    "name" : "interface",
+    "value" : "'敏感词维护-修改'"
+  }, {
+    "name" : "is_db",
+    "value" : "1"
+  }, {
+    "name" : "method",
+    "value" : "'put'"
+  }, {
+    "name" : "path",
+    "value" : "'/stage-api/deploy/word'"
+  }, {
+    "name" : "sql",
+    "value" : "'select id from t_sensitive_word where sensitive_word = '这个世界上能够好好用''"
+  }, {
+    "name" : "title",
+    "value" : "'修改敏感词为1个字符'"
+  } ],
+  "links" : [ {
+    "name" : "我的博客",
+    "url" : "https://www.cnblogs.com/jinggs/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "32ea76ae43b97a27.json",
+  "parameterValues" : [ "{'id': 301, 'sensitiveWord': '马'}", "'case_008'", "'id'", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-修改'", "1", "'put'", "'/stage-api/deploy/word'", "'select id from t_sensitive_word where sensitive_word = '这个世界上能够好好用''", "'修改敏感词为1个字符'" ]
+}

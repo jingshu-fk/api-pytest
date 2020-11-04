@@ -1,0 +1,187 @@
+{
+  "uid" : "2892b029a7d69ea5",
+  "name" : "敏感词为空",
+  "fullName" : "test_centre.TestApiAuto#test_main",
+  "historyId" : "3eca1da9809bd3ed29b37cd733f05b58",
+  "time" : {
+    "start" : 1604395761397,
+    "stop" : 1604395761435,
+    "duration" : 38
+  },
+  "description" : "敏感词维护-新增",
+  "descriptionHtml" : "<p>敏感词维护-新增</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "敏感词维护-新增",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理数据依赖，修改body",
+      "time" : {
+        "start" : 1604395761398,
+        "stop" : 1604395761398,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，得到响应",
+      "time" : {
+        "start" : 1604395761398,
+        "stop" : 1604395761435,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "与预期结果比较断言",
+      "time" : {
+        "start" : 1604395761435,
+        "stop" : 1604395761435,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "保存响应结果",
+      "time" : {
+        "start" : 1604395761435,
+        "stop" : 1604395761435,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "bcd7062ef2ecec37",
+      "name" : "log",
+      "source" : "bcd7062ef2ecec37.txt",
+      "type" : "text/plain",
+      "size" : 254
+    }, {
+      "uid" : "a99fba38f26611d8",
+      "name" : "stdout",
+      "source" : "a99fba38f26611d8.txt",
+      "type" : "text/plain",
+      "size" : 6
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "新华快讯项目"
+  }, {
+    "name" : "suite",
+    "value" : "test_centre"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "sms-pc"
+  }, {
+    "name" : "thread",
+    "value" : "15100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_centre"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "body",
+    "value" : "{'sensitiveWord': ''}"
+  }, {
+    "name" : "case_id",
+    "value" : "'case_006'"
+  }, {
+    "name" : "change_word",
+    "value" : "None"
+  }, {
+    "name" : "depend",
+    "value" : "{}"
+  }, {
+    "name" : "excepted",
+    "value" : "{'msg': '敏感词不能为空', 'code': 500}"
+  }, {
+    "name" : "header",
+    "value" : "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}"
+  }, {
+    "name" : "header_change",
+    "value" : "'Authorization'"
+  }, {
+    "name" : "interface",
+    "value" : "'敏感词维护-新增'"
+  }, {
+    "name" : "is_db",
+    "value" : "0"
+  }, {
+    "name" : "method",
+    "value" : "'post'"
+  }, {
+    "name" : "path",
+    "value" : "'/stage-api/deploy/word'"
+  }, {
+    "name" : "sql",
+    "value" : "None"
+  }, {
+    "name" : "title",
+    "value" : "'敏感词为空'"
+  } ],
+  "links" : [ {
+    "name" : "我的博客",
+    "url" : "https://www.cnblogs.com/jinggs/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2892b029a7d69ea5.json",
+  "parameterValues" : [ "{'sensitiveWord': ''}", "'case_006'", "None", "{}", "{'msg': '敏感词不能为空', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-新增'", "0", "'post'", "'/stage-api/deploy/word'", "None", "'敏感词为空'" ]
+}

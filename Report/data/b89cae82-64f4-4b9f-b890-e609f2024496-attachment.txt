@@ -1,0 +1,3 @@
+INFO     blchpjulyv:test_centre.py:100 执行用例case_009——
+INFO     qovsxvxxlj:dealrely.py:57 用例case_009请求值为{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '', 'content': '不选地区'}：
+INFO     blchpjulyv:test_centre.py:110 实际响应为：{'msg': '操作成功', 'code': 200}

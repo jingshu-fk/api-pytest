@@ -1,0 +1,117 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError",
+      "children" : [ {
+        "name" : "messageCode不正确",
+        "uid" : "b4c7c0e28040df04",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395761970,
+          "stop" : 1604395762002,
+          "duration" : 32
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': 'PWJFJ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '577', 'content': '22222222'}", "'case_002'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-MessageCode'", "0", "'post'", "'/stage-api/message/task'", "None", "'messageCode不正确'" ]
+      }, {
+        "name" : "messageCode参数值为空",
+        "uid" : "70be5927f86bcf7e",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762065,
+          "stop" : 1604395762092,
+          "duration" : 27
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': '', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '577', 'content': '22222222'}", "'case_003'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-MessageCode'", "0", "'post'", "'/stage-api/message/task'", "None", "'messageCode参数值为空'" ]
+      }, {
+        "name" : "messgageCode参数不填",
+        "uid" : "37e7751023f1412d",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762108,
+          "stop" : 1604395762132,
+          "duration" : 24
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '577', 'content': '22222222'}", "'case_004'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-MessageCode'", "0", "'post'", "'/stage-api/message/task'", "None", "'messgageCode参数不填'" ]
+      }, {
+        "name" : "areas不在570-580",
+        "uid" : "24c64d5178f2fe1",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762147,
+          "stop" : 1604395762174,
+          "duration" : 27
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': 'XHKX_DZK', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '581', 'content': '177777777'}", "'case_005'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas不在570-580'" ]
+      }, {
+        "name" : "不选地区",
+        "uid" : "2f2817f252226c1e",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762318,
+          "stop" : 1604395762343,
+          "duration" : 25
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '', 'content': '不选地区'}", "'case_009'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'不选地区'" ]
+      }, {
+        "name" : "areas参数不填",
+        "uid" : "775115cc1521036",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762358,
+          "stop" : 1604395762410,
+          "duration" : 52
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'content': 'areas参数不填'}", "'case_010'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-areas'", "0", "'post'", "'/stage-api/message/task'", "None", "'areas参数不填'" ]
+      }, {
+        "name" : "content为空",
+        "uid" : "e150cdafa1f056dd",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762742,
+          "stop" : 1604395762765,
+          "duration" : 23
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '573', 'content': ''}", "'case_020'", "None", "{}", "{'msg': '操作失败', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content为空'" ]
+      }, {
+        "name" : "content参数不填",
+        "uid" : "5c748243eaf8cd03",
+        "parentUid" : "a0017ad855102fea08b8682d27fec4ca",
+        "status" : "failed",
+        "time" : {
+          "start" : 1604395762783,
+          "stop" : 1604395762803,
+          "duration" : 20
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '575'}", "'case_021'", "None", "{}", "{'msg': 'null', 'code': 500}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content参数不填'" ]
+      } ],
+      "uid" : "a0017ad855102fea08b8682d27fec4ca"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

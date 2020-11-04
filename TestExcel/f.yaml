@@ -1,0 +1,101 @@
+case39:
+- case_id: case_001
+  interface: 业务流程
+  title: 信息录入
+  method: post
+  path: /stage-api/message/task
+  headers:
+    Accept: application/json, text/plain, */*
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Authorization: ''
+  header_change: Authorization
+  body:
+    messageCode: XHKX_DZK
+    beginsTime: '2020-08-12T01:44:00.000Z'
+    engTime: '2020-08-12T10:43:00.000Z'
+    areas: '573'
+    content: 8月22日测试下发
+  excepted:
+    msg: 操作成功
+    code: 200
+  depend: {}
+  is_db: 0
+  sql: truncate table T_MESSAGE_TASK
+  change_word: null
+case40:
+- case_id: case_002
+  interface: null
+  title: 初审
+  method: post
+  path: /stage-api/message/reply
+  headers:
+    Accept: application/json, text/plain, */*
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Authorization: ''
+  header_change: Authorization
+  body:
+  - taskId: 2243
+    name: 阿路
+    phone: '17857995703'
+    role: 0
+    taskContent: 8月22日测试下发
+  excepted:
+    msg: 操作成功
+    code: 200
+  depend: {}
+  is_db: 1
+  sql: select id from T_MESSAGE_TASK
+  change_word: taskId
+case41:
+- case_id: case_003
+  interface: null
+  title: 终审
+  method: post
+  path: /stage-api/message/reply
+  headers:
+    Accept: application/json, text/plain, */*
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Authorization: ''
+  header_change: Authorization
+  body:
+  - taskId: 2243
+    name: 阿知
+    phone: '13000000001'
+    role: 1
+    taskContent: 8月22日测试下发
+  excepted:
+    msg: 操作成功
+    code: 200
+  depend: {}
+  is_db: 1
+  sql: select id from T_MESSAGE_TASK
+  change_word: taskId
+case42:
+- case_id: case_004
+  interface: null
+  title: 发布
+  method: put
+  path: /stage-api/message/task/updateStatus
+  headers:
+    Accept: application/json, text/plain, */*
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Authorization: ''
+  header_change: Authorization
+  body:
+    id: 2243
+    status: 4
+    codeInfo:
+    - XHKX_DZK
+    pushTasksCode: XHKX_DZK
+    content: 8月22日测试下发
+  excepted:
+    msg: 操作成功
+    code: 200
+  depend: {}
+  is_db: 1
+  sql: select id from T_MESSAGE_TASK
+  change_word: id

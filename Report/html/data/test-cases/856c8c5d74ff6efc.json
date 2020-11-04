@@ -1,0 +1,187 @@
+{
+  "uid" : "856c8c5d74ff6efc",
+  "name" : "信息录入-冒烟",
+  "fullName" : "test_centre.TestApiAuto#test_main",
+  "historyId" : "7178a187720107ddaa6262b1ad9ab656",
+  "time" : {
+    "start" : 1604395761671,
+    "stop" : 1604395761960,
+    "duration" : 289
+  },
+  "description" : "信息录入",
+  "descriptionHtml" : "<p>信息录入</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "信息录入",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理数据依赖，修改body",
+      "time" : {
+        "start" : 1604395761671,
+        "stop" : 1604395761906,
+        "duration" : 235
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，得到响应",
+      "time" : {
+        "start" : 1604395761906,
+        "stop" : 1604395761959,
+        "duration" : 53
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "与预期结果比较断言",
+      "time" : {
+        "start" : 1604395761959,
+        "stop" : 1604395761959,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "保存响应结果",
+      "time" : {
+        "start" : 1604395761959,
+        "stop" : 1604395761959,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "9f08f6d79a463e49",
+      "name" : "log",
+      "source" : "9f08f6d79a463e49.txt",
+      "type" : "text/plain",
+      "size" : 465
+    }, {
+      "uid" : "214ad0ff09df7590",
+      "name" : "stdout",
+      "source" : "214ad0ff09df7590.txt",
+      "type" : "text/plain",
+      "size" : 6
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "新华快讯项目"
+  }, {
+    "name" : "suite",
+    "value" : "test_centre"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "sms-pc"
+  }, {
+    "name" : "thread",
+    "value" : "15100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_centre"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "body",
+    "value" : "{'messageCode': 'XHKX_DZ_CDX', 'beginsTime': '2020-08-05T01:57:00.000Z', 'engTime': '2020-08-05T07:57:00.000Z', 'areas': '570', 'content': '冒烟测试流程5'}"
+  }, {
+    "name" : "case_id",
+    "value" : "'case_001'"
+  }, {
+    "name" : "change_word",
+    "value" : "None"
+  }, {
+    "name" : "depend",
+    "value" : "{}"
+  }, {
+    "name" : "excepted",
+    "value" : "{'msg': '操作成功', 'code': 200}"
+  }, {
+    "name" : "header",
+    "value" : "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}"
+  }, {
+    "name" : "header_change",
+    "value" : "'Authorization'"
+  }, {
+    "name" : "interface",
+    "value" : "'信息录入'"
+  }, {
+    "name" : "is_db",
+    "value" : "1"
+  }, {
+    "name" : "method",
+    "value" : "'post'"
+  }, {
+    "name" : "path",
+    "value" : "'/stage-api/message/task'"
+  }, {
+    "name" : "sql",
+    "value" : "'truncate table T_MESSAGE_TASK'"
+  }, {
+    "name" : "title",
+    "value" : "'信息录入-冒烟'"
+  } ],
+  "links" : [ {
+    "name" : "我的博客",
+    "url" : "https://www.cnblogs.com/jinggs/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "856c8c5d74ff6efc.json",
+  "parameterValues" : [ "{'messageCode': 'XHKX_DZ_CDX', 'beginsTime': '2020-08-05T01:57:00.000Z', 'engTime': '2020-08-05T07:57:00.000Z', 'areas': '570', 'content': '冒烟测试流程5'}", "'case_001'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入'", "1", "'post'", "'/stage-api/message/task'", "'truncate table T_MESSAGE_TASK'", "'信息录入-冒烟'" ]
+}

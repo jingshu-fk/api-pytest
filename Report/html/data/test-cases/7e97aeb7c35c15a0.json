@@ -1,0 +1,187 @@
+{
+  "uid" : "7e97aeb7c35c15a0",
+  "name" : "content70字符中文",
+  "fullName" : "test_centre.TestApiAuto#test_main",
+  "historyId" : "8acc90223617127351a66a1e283b099c",
+  "time" : {
+    "start" : 1604395762543,
+    "stop" : 1604395762563,
+    "duration" : 20
+  },
+  "description" : "信息录入-content",
+  "descriptionHtml" : "<p>信息录入-content</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "信息录入-content",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理数据依赖，修改body",
+      "time" : {
+        "start" : 1604395762544,
+        "stop" : 1604395762544,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，得到响应",
+      "time" : {
+        "start" : 1604395762544,
+        "stop" : 1604395762562,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "与预期结果比较断言",
+      "time" : {
+        "start" : 1604395762562,
+        "stop" : 1604395762562,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "保存响应结果",
+      "time" : {
+        "start" : 1604395762563,
+        "stop" : 1604395762563,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "b54b1513f8d851cb",
+      "name" : "log",
+      "source" : "b54b1513f8d851cb.txt",
+      "type" : "text/plain",
+      "size" : 570
+    }, {
+      "uid" : "7950640f106a8665",
+      "name" : "stdout",
+      "source" : "7950640f106a8665.txt",
+      "type" : "text/plain",
+      "size" : 6
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "新华快讯项目"
+  }, {
+    "name" : "suite",
+    "value" : "test_centre"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "sms-pc"
+  }, {
+    "name" : "thread",
+    "value" : "15100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_centre"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "body",
+    "value" : "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '574', 'content': '新昌气象台时发布：今天夜里到明天阴有时有雨，偏北风到级，温度后天阴到多云。桐庐:今天夜里到明天阴有小雨，东北风级，明天气温桐庐气象发布到明天'}"
+  }, {
+    "name" : "case_id",
+    "value" : "'case_014'"
+  }, {
+    "name" : "change_word",
+    "value" : "None"
+  }, {
+    "name" : "depend",
+    "value" : "{}"
+  }, {
+    "name" : "excepted",
+    "value" : "{'msg': '操作成功', 'code': 200}"
+  }, {
+    "name" : "header",
+    "value" : "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}"
+  }, {
+    "name" : "header_change",
+    "value" : "'Authorization'"
+  }, {
+    "name" : "interface",
+    "value" : "'信息录入-content'"
+  }, {
+    "name" : "is_db",
+    "value" : "0"
+  }, {
+    "name" : "method",
+    "value" : "'post'"
+  }, {
+    "name" : "path",
+    "value" : "'/stage-api/message/task'"
+  }, {
+    "name" : "sql",
+    "value" : "None"
+  }, {
+    "name" : "title",
+    "value" : "'content70字符中文'"
+  } ],
+  "links" : [ {
+    "name" : "我的博客",
+    "url" : "https://www.cnblogs.com/jinggs/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7e97aeb7c35c15a0.json",
+  "parameterValues" : [ "{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '574', 'content': '新昌气象台时发布：今天夜里到明天阴有时有雨，偏北风到级，温度后天阴到多云。桐庐:今天夜里到明天阴有小雨，东北风级，明天气温桐庐气象发布到明天'}", "'case_014'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'信息录入-content'", "0", "'post'", "'/stage-api/message/task'", "None", "'content70字符中文'" ]
+}

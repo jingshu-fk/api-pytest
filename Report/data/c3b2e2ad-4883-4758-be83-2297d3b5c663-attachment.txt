@@ -1,0 +1,4 @@
+INFO     blchpjulyv:test_centre.py:100 执行用例case_013——
+INFO     jwsfgeej_m:save_su_re.py:63 body字典的值为: {'case_001': {'sensitiveWord': '舒景平'}, 'case_002': {'sensitiveWord': '这个世界上能够好好用'}, 'case_003': {'sensitiveWord': 'DDGEJjkdjeghzhHFKAHG'}, 'case_004': {'sensitiveWord': '33333333333333333222'}, 'case_005': {'sensitiveWord': '33333333333333333222'}, 'case_006': {'sensitiveWord': ''}, 'case_007': {}, 'case_008': {'id': 1262, 'sensitiveWord': '马'}, 'case_009': {'sensitiveWord': '应急下发测试短信请及', 'id': 1262}, 'case_010': {'sensitiveWord': 'VGNVJfhbhrjehFHKVNKR', 'id': 1262}, 'case_011': {'sensitiveWord': '31333730303030303030', 'id': 1262}, 'case_012': {'sensitiveWord': '舒景平', 'id': 1262}}
+INFO     qovsxvxxlj:dealrely.py:52 用例case_013请求值为{'sensitiveWord': '', 'id': 1262}：
+INFO     blchpjulyv:test_centre.py:110 实际响应为：{'msg': '敏感词不能为空', 'code': 500}

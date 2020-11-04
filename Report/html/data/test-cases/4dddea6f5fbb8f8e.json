@@ -1,0 +1,184 @@
+{
+  "uid" : "4dddea6f5fbb8f8e",
+  "name" : "终审",
+  "fullName" : "test_centre.TestApiAuto#test_main",
+  "historyId" : "0e32ed096ccf69aa145fec1755019b75",
+  "time" : {
+    "start" : 1604395763137,
+    "stop" : 1604395763198,
+    "duration" : 61
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理数据依赖，修改body",
+      "time" : {
+        "start" : 1604395763137,
+        "stop" : 1604395763138,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，得到响应",
+      "time" : {
+        "start" : 1604395763138,
+        "stop" : 1604395763198,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "与预期结果比较断言",
+      "time" : {
+        "start" : 1604395763198,
+        "stop" : 1604395763198,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "保存响应结果",
+      "time" : {
+        "start" : 1604395763198,
+        "stop" : 1604395763198,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "227953ca1a4e609c",
+      "name" : "log",
+      "source" : "227953ca1a4e609c.txt",
+      "type" : "text/plain",
+      "size" : 335
+    }, {
+      "uid" : "ad4d86d11d3ede30",
+      "name" : "stdout",
+      "source" : "ad4d86d11d3ede30.txt",
+      "type" : "text/plain",
+      "size" : 6
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "新华快讯项目"
+  }, {
+    "name" : "suite",
+    "value" : "test_centre"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "sms-pc"
+  }, {
+    "name" : "thread",
+    "value" : "15100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_centre"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "body",
+    "value" : "[{'taskId': 2243, 'name': '阿知', 'phone': '13000000001', 'role': 1, 'taskContent': '8月22日测试下发'}]"
+  }, {
+    "name" : "case_id",
+    "value" : "'case_003'"
+  }, {
+    "name" : "change_word",
+    "value" : "'taskId'"
+  }, {
+    "name" : "depend",
+    "value" : "{}"
+  }, {
+    "name" : "excepted",
+    "value" : "{'msg': '操作成功', 'code': 200}"
+  }, {
+    "name" : "header",
+    "value" : "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}"
+  }, {
+    "name" : "header_change",
+    "value" : "'Authorization'"
+  }, {
+    "name" : "interface",
+    "value" : "None"
+  }, {
+    "name" : "is_db",
+    "value" : "1"
+  }, {
+    "name" : "method",
+    "value" : "'post'"
+  }, {
+    "name" : "path",
+    "value" : "'/stage-api/message/reply'"
+  }, {
+    "name" : "sql",
+    "value" : "'select id from T_MESSAGE_TASK'"
+  }, {
+    "name" : "title",
+    "value" : "'终审'"
+  } ],
+  "links" : [ {
+    "name" : "我的博客",
+    "url" : "https://www.cnblogs.com/jinggs/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4dddea6f5fbb8f8e.json",
+  "parameterValues" : [ "[{'taskId': 2243, 'name': '阿知', 'phone': '13000000001', 'role': 1, 'taskContent': '8月22日测试下发'}]", "'case_003'", "'taskId'", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "None", "1", "'post'", "'/stage-api/message/reply'", "'select id from T_MESSAGE_TASK'", "'终审'" ]
+}

@@ -1,0 +1,3 @@
+INFO     blchpjulyv:test_centre.py:100 执行用例case_005——
+INFO     qovsxvxxlj:dealrely.py:57 用例case_005请求值为{'sensitiveWord': '33333333333333333222'}：
+INFO     blchpjulyv:test_centre.py:110 实际响应为：{'msg': '33333333333333333222 敏感词已存在', 'code': 500}

@@ -1,0 +1,46 @@
+case1:
+- case_id: case_001
+  interface: 审核人员信息-新增
+  title: 新增一个初审
+  method: post
+  path: /stage-api/deploy/auditmanager
+  headers:
+    Accept: application/json, text/plain, */*
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Authorization: ''
+  header_change: Authorization
+  body:
+    name: 阿路
+    role: 0
+    phone: '17857995703'
+  excepted:
+    msg: 操作成功
+    code: 200
+  depend: {}
+  is_db: 1
+  sql: truncate table t_auditmanager
+  change_word: null
+case2:
+- case_id: case_002
+  interface: 审核人员信息-新增
+  title: 新增一个终审
+  method: post
+  path: /stage-api/deploy/auditmanager
+  headers:
+    Accept: application/json, text/plain, */*
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Authorization: ''
+  header_change: Authorization
+  body:
+    name: 阿知
+    role: 1
+    phone: '13000000001'
+  excepted:
+    msg: 操作成功
+    code: 200
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null

@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "604d99f631405cbd5e3e769fb52f6f6f",
+    "name" : "新华快讯项目",
+    "statistic" : {
+      "failed" : 8,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 34,
+      "unknown" : 0,
+      "total" : 42
+    }
+  } ]
+}

@@ -1,0 +1,3 @@
+INFO     blchpjulyv:test_centre.py:100 执行用例case_014——
+INFO     qovsxvxxlj:dealrely.py:57 用例case_014请求值为{'messageCode': 'MSKX_DZ', 'beginsTime': '2020-07-22T06:48:00.000Z', 'engTime': '2020-07-23T06:48:00.000Z', 'areas': '574', 'content': '新昌气象台时发布：今天夜里到明天阴有时有雨，偏北风到级，温度后天阴到多云。桐庐:今天夜里到明天阴有小雨，东北风级，明天气温桐庐气象发布到明天'}：
+INFO     blchpjulyv:test_centre.py:110 实际响应为：{'msg': '操作成功', 'code': 200}

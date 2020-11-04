@@ -1,0 +1,4 @@
+INFO     blchpjulyv:test_centre.py:100 执行用例case_001——
+INFO     qovsxvxxlj:dealrely.py:35 已执行SQL：truncate table T_MESSAGE_TASK
+INFO     qovsxvxxlj:dealrely.py:45 用例case_001请求值为{'messageCode': 'XHKX_DZ_CDX', 'beginsTime': '2020-08-05T01:57:00.000Z', 'engTime': '2020-08-05T07:57:00.000Z', 'areas': '570', 'content': '冒烟测试流程5'}：
+INFO     blchpjulyv:test_centre.py:110 实际响应为：{'msg': '操作成功', 'code': 200}

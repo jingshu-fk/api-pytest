@@ -1,0 +1,187 @@
+{
+  "uid" : "56c2fb3f6989837b",
+  "name" : "新增敏感词1个字符",
+  "fullName" : "test_centre.TestApiAuto#test_main",
+  "historyId" : "7b30cdafe7ea330a64655c1417df5e70",
+  "time" : {
+    "start" : 1604395760582,
+    "stop" : 1604395761251,
+    "duration" : 669
+  },
+  "description" : "敏感词维护-冒烟",
+  "descriptionHtml" : "<p>敏感词维护-冒烟</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "敏感词维护-冒烟",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "处理数据依赖，修改body",
+      "time" : {
+        "start" : 1604395760583,
+        "stop" : 1604395760962,
+        "duration" : 379
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "发送请求，得到响应",
+      "time" : {
+        "start" : 1604395760962,
+        "stop" : 1604395761251,
+        "duration" : 289
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "与预期结果比较断言",
+      "time" : {
+        "start" : 1604395761251,
+        "stop" : 1604395761251,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "保存响应结果",
+      "time" : {
+        "start" : 1604395761251,
+        "stop" : 1604395761251,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "8afa903619afdb9b",
+      "name" : "log",
+      "source" : "8afa903619afdb9b.txt",
+      "type" : "text/plain",
+      "size" : 336
+    }, {
+      "uid" : "b4e345a05c0da51a",
+      "name" : "stdout",
+      "source" : "b4e345a05c0da51a.txt",
+      "type" : "text/plain",
+      "size" : 6
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "epic",
+    "value" : "新华快讯项目"
+  }, {
+    "name" : "suite",
+    "value" : "test_centre"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestApiAuto"
+  }, {
+    "name" : "host",
+    "value" : "sms-pc"
+  }, {
+    "name" : "thread",
+    "value" : "15100-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_centre"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "body",
+    "value" : "{'sensitiveWord': '舒景平'}"
+  }, {
+    "name" : "case_id",
+    "value" : "'case_001'"
+  }, {
+    "name" : "change_word",
+    "value" : "None"
+  }, {
+    "name" : "depend",
+    "value" : "{}"
+  }, {
+    "name" : "excepted",
+    "value" : "{'msg': '操作成功', 'code': 200}"
+  }, {
+    "name" : "header",
+    "value" : "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}"
+  }, {
+    "name" : "header_change",
+    "value" : "'Authorization'"
+  }, {
+    "name" : "interface",
+    "value" : "'敏感词维护-冒烟'"
+  }, {
+    "name" : "is_db",
+    "value" : "1"
+  }, {
+    "name" : "method",
+    "value" : "'post'"
+  }, {
+    "name" : "path",
+    "value" : "'/stage-api/deploy/word'"
+  }, {
+    "name" : "sql",
+    "value" : "'truncate table t_sensitive_word'"
+  }, {
+    "name" : "title",
+    "value" : "'新增敏感词1个字符'"
+  } ],
+  "links" : [ {
+    "name" : "我的博客",
+    "url" : "https://www.cnblogs.com/jinggs/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "56c2fb3f6989837b.json",
+  "parameterValues" : [ "{'sensitiveWord': '舒景平'}", "'case_001'", "None", "{}", "{'msg': '操作成功', 'code': 200}", "{'Accept': 'application/json, text/plain, */*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;charset=UTF-8', 'Authorization': ''}", "'Authorization'", "'敏感词维护-冒烟'", "1", "'post'", "'/stage-api/deploy/word'", "'truncate table t_sensitive_word'", "'新增敏感词1个字符'" ]
+}
