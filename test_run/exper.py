@@ -51,6 +51,16 @@ def oop():
 		yaml, sheet = i
 		print(yaml, sheet)
 
+def ww():
+	c = ['1-1', '2-1', '3-0', '5-0']
+
+	for i in c:
+		if i.split('-')[-1] == '0':
+			c.remove(i)
+		else:
+			print('pass')
+	print(c)
+
 
 
 
@@ -58,4 +68,5 @@ def oop():
 if __name__ == '__main__':
 	# print(get_task())
 	# dict_test()
-	print(oop())
+	# print(oop())
+	ww()

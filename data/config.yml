@@ -1,22 +1,40 @@
 file_path:
   # 请求的url
-  host: http://192.168.150.139:9007
-  host_yjji: http://192.168.150.131:8787
+  xhkx_host: http://192.168.150.139:9007
+  yiji_host: http://172.16.222.122:9003
+  dtrk_host: http://192.168.150.131:8003
+  5G_host: http://192.168.150.142:8095
+  result_base: result_base
   # 测试报告输出目录
-  Report: E:\mywork\API_TEST\apiPytest\Report\data
-  Result: E:\mywork\API_TEST\apiPytest\Report\html
-  excel_file: E:\mywork\API_TEST\apiPytest\TestExcel\新华快讯功能接口用例.xlsx
-  output_yaml: E:\mywork\API_TEST\apiPytest\TestExcel\c.yaml,E:\mywork\API_TEST\apiPytest\TestExcel\d.yaml,E:\mywork\API_TEST\apiPytest\TestExcel\e.yaml,E:\mywork\API_TEST\apiPytest\TestExcel\f.yaml
-  output_yaml_bak: E:\mywork\API_TEST\apiPytest\TestExcel\b.yaml
+  Report: /home/sms/.jenkins/workspace/api_test_01/allure_report
+  Result: /home/sms/.jenkins/workspace/api_test_01/allure_result
+  excel_file: ../TestExcel/
+  # 用例数据初始化到yaml的目录
+  output_yaml: ../run_yaml/
 basic_info:
-  token: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjViYTVjN2IxLWNlNTctNGIzMy05OTZmLWUwYjE4ZjQxMDg5YSJ9.RBgEcr-36MBXQIcEn7nXacyZy7ZmoVUZgXgsBTg5UBU-ACx4mVKypGVDVI4vo5vdJtJO3ES_otAvIKorsY_NXg
-xhkx_database:
-  # 新华快讯项的数据库配置
-  file: ../TestExcel/xhkx.yaml
+  token: eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6ImY1MGFhYWMxLWQ0NGQtNDYwNi05N2UyLWZkZWZkZjE2MjNjZSJ9.kJdysInQ8HDnnWKXmeq9nNNYb8qLCXtf19AUfFg0LvhbWnQ5XlwKoWBFztdjHTj9R8ZOmfPcQuIKTCrUaf2DiA
+xhkx_host:
+  # 新华快讯数据库配置
   username: xhkx_test
   password: czty_xhkx123
-  url: 192.168.150.116:1521/pdbtest
-  sql: select * from t_xhkx_data
-# 应急云化的配置
-yjqf_yh:
-  file: ../TestExcel/yjqf_yh.yaml
+  sid: 192.168.150.116:1521/pdbtest
+
+dtrk_host:
+  username: test_dtrk
+  password: czty_dtrk123
+  sid: 192.168.150.116:3306/test_dtrk
+
+5G_host:
+  username: mycat
+  password: 123456
+  sid: 192.168.150.132:8066/mycatdb
+
+yiji_host:
+  username: yjyh
+  password: czty_yjyh
+  sid: 192.168.150.126:1521/dev
+
+result_base:
+  username: root
+  password: root
+  sid: 192.168.150.133:3306/test
