@@ -1,7 +1,8 @@
 import logging
 from logging.handlers import TimedRotatingFileHandler
-import concurrent_log_handler
+# import concurrent_log_handler
 import random
+from multiprocessing import Process, Lock
 
 
 class MyLogger(object):
@@ -44,6 +45,12 @@ class MyLogger(object):
 
 
 if __name__ == '__main__':
-    log = MyLogger().create_logger()
-    log.info("test-info")
-    log.error("test-error")
+    lock = Lock()
+    p = Process(target=MyLogger.create_logger)
+    p.start()
+
+
+
+    # log = MyLogger().create_logger()
+    # log.info("test-info")
+    # log.error("test-error")

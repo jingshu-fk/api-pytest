@@ -24,8 +24,6 @@ class AssertRe:
         return None
 
 
-
-
 if __name__ == '__main__':
     AssertRe().assert_job({
     "code": 0,

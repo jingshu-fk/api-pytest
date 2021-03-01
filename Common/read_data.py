@@ -117,25 +117,25 @@ class ReadExcel:
         self.close()
         return terminal_cases
 
-    def read_excel_3(self):
+    # 传入参数：要执行测试的表单sheet列表
+    def read_excel_3(self, in_sheets):
         """
-        遍历excel的每一个sheet表单，每个表单里的按行遍历数据，一个sheet的写到字典middle_cases里，key为用例编号，value为列表cases，
+        1.遍历excel的每一个sheet表单，判断是否需要执行测试获取到数据，
+        2.每个表单里的按行遍历数据，一个sheet的写到字典middle_cases里，key为用例编号，value为列表cases，
         里面是字典dict_cases，字典里面是具体每个字段的key，value
-        最后把每个sheet的字典，都会添加到列表terminal_cases
+        3.最后把每个sheet的字典，都会添加到列表terminal_cases
         """
-        # 得到所有的表单名
-        sheets = self.get_sheets()
 
         # 把每个sheet的用例数据添加进来
         terminal_cases = []
         # 用例编号初始化
         case_sequence = 0
-        for i in sheets:
+        for form in in_sheets:
             # 用来存储单个sheet的用例数据
             middle_cases = {}
 
-            # 定义操作excel表单对象
-            self.sh = self.wb[i]
+            self.sh = self.wb[form]
+
             # 获取该表单的行数
             rows = list(self.sh.rows)
             titles = []
@@ -145,39 +145,57 @@ class ReadExcel:
                 titles.append(title)
 
             for row in rows[1:]:
-                # case = []
-                # 遍历每一行的每个字段
-                num = 0
-                dict_cases = {}  # 用来存放一行用例数据
-                cases = []
-                # 一行的用例数据处理完成，得到列表，里面是字典（具体到每个字段）
-                for r in row:
-                    temp_1 = r.value
-                    # 判断字段是否是属于字典类型的，
-                    if titles[num] in ['body', 'excepted', 'headers', 'depend']:
-                        # 如果该字段的值不是空，就把该字段值转为字典
-                        if r.value is not None:
-                            temp_2 = ast.literal_eval(r.value)
-                            dict_cases[titles[num]] = temp_2
-                        # 为空的话，就直接添加到字典dict_cases里
+                if row[-1].value == 1:  # 【12-30】【这里是改变的地方，用来判断该行用例是否需要后续操作】
+                    # 遍历每一行的每个字段
+                    num = 0
+                    dict_cases = {}  # 用来存放一行用例数据
+                    cases = []
+                    # 一行的用例数据处理完成，得到列表，里面是字典（具体到每个字段）
+                    for r in row:
+                        temp_1 = r.value
+                        # 判断字段是否是属于字典类型的
+                        if titles[num] in ['body', 'excepted', 'headers', 'depend']:
+                            # 如果该字段的值不是空，就把该字段值转为字典
+                            if r.value is not None:
+                                temp_2 = ast.literal_eval(r.value)
+                                dict_cases[titles[num]] = temp_2
+                            # 为空的话，就直接添加到字典dict_cases里
+                            else:
+                                dict_cases[titles[num]] = temp_1
+                        # 不是属于字典类型的，直接添加到字典dict_cases里
                         else:
                             dict_cases[titles[num]] = temp_1
-                    # 不是属于字典类型的，直接添加到字典dict_cases里
-                    else:
-                        dict_cases[titles[num]] = temp_1
-                    num += 1
-                # 一条用例处理完成，得到列表
-                cases.append(dict_cases)
+                        num += 1
+                    dict_cases['module_name'] = form  # 添加模块名
+                    # 一条用例处理完成，得到列表
+                    cases.append(dict_cases)
 
-                # 用例编号递增
-                case_sequence += 1
+                    # 用例编号递增
+                    case_sequence += 1
 
-                # 最终得到所有sheets的一个字典，key为case,value为列表，里面是字典，一个字典里是一条用例：
-                # {'case1': [{'case_id': 'case_001', 'interface':'任务查询',....}], 'case2':['']}
-                middle_cases['case' + str(case_sequence)] = cases
+                    # 最终得到所有sheets的一个字典，key为case,value为列表，里面是字典，一个字典里是一条用例：
+                    # {'case1': [{'case_id': 'case_001', 'interface':'任务查询',....}], 'case2':['']}
+                    middle_cases['case' + str(case_sequence)] = cases
             terminal_cases.append(middle_cases)
         self.close()
-        return terminal_cases
+        return terminal_cases, in_sheets
+
+    # 功能：得到要执行测试的表单
+    def get_forms(self):
+        # 得到所有的表单名
+        in_sheets = self.get_sheets()
+
+        # 1 # 根据excel的最后一个标志位：1代表生成yml，0代表不生成yml;第二个是是否执行的标志位
+        del_shes = []
+        for sht in in_sheets:
+            if sht.split('-')[1] == '0':
+                del_shes.append(sht)  # 要删除的元素添加到del_shets存放
+            else:
+                print('%s将生成yml文件执行测试' % sht)
+        for de_sh in del_shes:
+            in_sheets.remove(de_sh)
+
+        return in_sheets
 
 
 # 从数据库表读取用例数据
@@ -195,7 +213,7 @@ class ReadDatabase:
         return result
 
 
-# 从yaml文件读取用例数据,供pytest参数化使用
+# 从yaml文件读取用例数据,供PyTest参数化使用
 class ReadYaml:
     def __init__(self, filename):
         with open(filename, 'r', encoding='utf-8') as f:
@@ -203,7 +221,7 @@ class ReadYaml:
 
     def get_yaml_data(self):
         cases = []
-        print(self.data)
+        # print(self.data)   # 这是个字典
         for k, v in self.data.items():
             for value in v:
                 case = []
@@ -217,8 +235,8 @@ class ReadYaml:
 
 if __name__ == '__main__':
     # test2 = ReadExcel('../TestExcel/应急云化任务查询.xlsx')
-    # test2 = ReadExcel('../TestExcel/新华快讯demo.xlsx')
-    # test2.write_data(2, 8, 'pass')
+    # test2 = ReadExcel('../TestExcel/新华快讯功能接口用例.xlsx')
+    # # test2.write_data(2, 8, 'pass')
     # res2 = test2.read_data()  # 最后返回一个存储字典的列表
     # print(res2)
     # print(len(res2))
@@ -229,14 +247,25 @@ if __name__ == '__main__':
     # print(test3.get_data())
     #
     # # --------------------------------------------------------------------------------
-    # ry = ReadYaml('../TestExcel/yjqf_yh.yaml')
-    # print(ry.get_yaml_data())
-    # if ry.get_yaml_data() == test3.get_data():
-    #     print('pass')
+    # import os
+    # path = '../run_yaml/'
+    # folders = os.listdir(path)
+    # print(folders)
+    # print(len(folders))
+    #
+    # yml_data = []
+    # for folder in folders:
+    #     ry = ReadYaml(path + folder)
+    #     # print(ry.get_yaml_data(), type(ry.get_yaml_data()))
+    #     yml_data.extend(ry.get_yaml_data())
+    # print(yml_data)
 
+    test2 = ReadExcel('../TestExcel/5G功能企业认证接口用例.xlsx')
 
-    test2 = ReadExcel('../TestExcel/新华快讯功能接口用例.xlsx')
-    print(test2.read_excel_3())
+    case_3, sheets = test2.read_excel_3(test2.get_forms())
+    print(case_3)
+    print(sheets)
+    # print(test2.read_excel_3())
 
     # rd = WriteYaml()
     # rd.pos()

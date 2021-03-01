@@ -1,5 +1,6 @@
-from apiPytest.Common.exec_database import operate_db
+from apiPytest.Common.exec_database import DBHandler
 from apiPytest.Common.source_log import MyLogger
+
 
 logger = MyLogger().create_logger()
 
@@ -26,21 +27,28 @@ class DealDepend(object):
                 body = eval(body)
         # sr = Save_depend_data()
 
-        # 判断依赖类型
+        # 【判断依赖类型】
         # 1 是否数据库依赖
         if is_db == 1:
             # 依赖字段是否为空，说明只执行sql
             if change_word is None:
-                operate_db(db_init,sql)
+                db_init.select_data(sql)
+                # operate_db(db_init,sql)
                 logger.info('已执行SQL：%s', sql)
             else:
-                # 从数据库取到的字段值
-                msg = operate_db(db_init, sql)
-                # 判断body的类型是dict还是list
-                if isinstance(body, list):
-                    body[0][change_word] = msg
-                elif isinstance(body, dict):
-                    body[change_word] = msg
+                # 把excel的change_word字段分割
+                update_words = change_word.split(',')
+                # 从数据库取到的字段值,可能有多个字段的值
+                msg = db_init.select_data(sql)
+                # msg = operate_db(db_init, sql)
+                # 遍历每个字段
+                for field in range(len(msg)):
+                    # 判断body的类型是dict还是list
+                    if isinstance(body, list):
+                        body[0][update_words[field]] = msg[field]
+                        # body[0][change_word] = msg
+                    elif isinstance(body, dict):
+                        body[update_words[field]] = msg[field]
             # 保存修改后的实际请求body
             logger.info('用例%s请求值为%s：' % (case_id, body))
             # sr.save_body(case_id, body)
