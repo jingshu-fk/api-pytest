@@ -1,0 +1,291 @@
+case1:
+- case_id: case_001
+  interface: 任务查询-冒烟
+  title: startTime、endTime当天时间
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-18 00:00:00'
+    endTime: '2020-09-18 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case2:
+- case_id: case_002
+  interface: 任务查询-冒烟
+  title: startTime、endTime今天之前
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-17 00:00:00'
+    endTime: '2020-09-17 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case3:
+- case_id: case_003
+  interface: 任务查询-边界值
+  title: startTime=开始时间
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-11 18:16:01'
+    endTime: '2020-09-11 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case4:
+- case_id: case_004
+  interface: 任务查询-边界值
+  title: startTime在开始时间之后
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-11 18:16:02'
+    endTime: '2020-09-11 23:59:59'
+  excepted:
+    code: 0
+    data: []
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case5:
+- case_id: case_005
+  interface: 任务查询-边界值
+  title: startTime在开始时间之前
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-11 18:16:00'
+    endTime: '2020-09-11 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case6:
+- case_id: case_006
+  interface: 任务查询-边界值
+  title: 时间范围内只有一条数据
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-05-08 10:16:00'
+    endTime: '2020-05-08 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case7:
+- case_id: case_007
+  interface: 任务查询-边界值
+  title: 时间范围内没有数据
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-15 10:16:00'
+    endTime: '2020-09-15 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case8:
+- case_id: case_008
+  interface: 任务查询-边界值
+  title: 时间范围内有多条数据
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-09-12 00:00:00'
+    endTime: '2020-09-12 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case9:
+- case_id: case_009
+  interface: 任务查询-边界值
+  title: startTime和endTime时间跨度=31天
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-08-11 00:00:00'
+    endTime: '2020-09-11 00:00:00'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case10:
+- case_id: case_010
+  interface: 任务查询-边界值
+  title: startTime和endTime时间跨度<31天
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-08-11 00:00:00'
+    endTime: '2020-09-10 23:59:59'
+  excepted:
+    code: 0
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case11:
+- case_id: case_011
+  interface: 任务查询-边界值
+  title: startTime和endTime时间跨度>31天
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-08-11 00:00:00'
+    endTime: '2020-09-12 00:00:00'
+  excepted:
+    code: -1
+    data: null
+    msg: 查询日期不能超过一个月
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case12:
+- case_id: case_012
+  interface: 任务查询-异常情况
+  title: 没有startTime
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    endTime: '2020-09-12 00:00:00'
+  excepted:
+    code: 0
+    data: []
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case13:
+- case_id: case_013
+  interface: 任务查询-异常情况
+  title: 没有endTime
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-08-11 00:00:00'
+  excepted:
+    code: 0
+    data: []
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case14:
+- case_id: case_014
+  interface: 任务查询-异常情况
+  title: startTime参数值为空
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: ''
+    endTime: '2020-09-12 23:00:00'
+  excepted:
+    code: 0
+    data: []
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case15:
+- case_id: case_015
+  interface: 任务查询-异常情况
+  title: endTime参数值为空
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body:
+    startTime: '2020-08-11 00:00:00'
+    endTime: ''
+  excepted:
+    code: 0
+    data: []
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null
+case16:
+- case_id: case_016
+  interface: 任务查询-异常情况
+  title: 没有startTime和endTime
+  method: get
+  path: /taskInfo/get
+  headers: null
+  header_change: null
+  body: {}
+  excepted:
+    code: 0
+    data: []
+    msg: 成功
+  depend: {}
+  is_db: 0
+  sql: null
+  change_word: null

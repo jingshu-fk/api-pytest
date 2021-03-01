@@ -1,0 +1,421 @@
+[ {
+  "uid" : "c06f761fdf1443ad",
+  "name" : "发布",
+  "time" : {
+    "start" : 1604395763208,
+    "stop" : 1604395763247,
+    "duration" : 39
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "33bfef201de0f684",
+  "name" : "content70字符数字",
+  "time" : {
+    "start" : 1604395762610,
+    "stop" : 1604395762655,
+    "duration" : 45
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "1b981ac1883b2f19",
+  "name" : "areas=570",
+  "time" : {
+    "start" : 1604395762229,
+    "stop" : 1604395762252,
+    "duration" : 23
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "c889e39d65e81992",
+  "name" : "敏感词参数不填",
+  "time" : {
+    "start" : 1604395761649,
+    "stop" : 1604395761661,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "a1860016f47e3be2",
+  "name" : "修改敏感词20字节数字",
+  "time" : {
+    "start" : 1604395761581,
+    "stop" : 1604395761599,
+    "duration" : 18
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "62dd007003efcb70",
+  "name" : "敏感词参数不填",
+  "time" : {
+    "start" : 1604395761445,
+    "stop" : 1604395761456,
+    "duration" : 11
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "b4c7c0e28040df04",
+  "name" : "messageCode不正确",
+  "time" : {
+    "start" : 1604395761970,
+    "stop" : 1604395762002,
+    "duration" : 32
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "979b4c27486845c9",
+  "name" : "修改敏感词为已存在的",
+  "time" : {
+    "start" : 1604395761609,
+    "stop" : 1604395761619,
+    "duration" : 10
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "775115cc1521036",
+  "name" : "areas参数不填",
+  "time" : {
+    "start" : 1604395762358,
+    "stop" : 1604395762410,
+    "duration" : 52
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "92d79c941ad5689c",
+  "name" : "content1字符中文",
+  "time" : {
+    "start" : 1604395762425,
+    "stop" : 1604395762451,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "429b953706acd1ed",
+  "name" : "content1字符英文",
+  "time" : {
+    "start" : 1604395762461,
+    "stop" : 1604395762503,
+    "duration" : 42
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "adeaa97cd8538e0d",
+  "name" : "修改敏感词为空",
+  "time" : {
+    "start" : 1604395761629,
+    "stop" : 1604395761640,
+    "duration" : 11
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "b08dfd4cdaa55a5e",
+  "name" : "content1字符数字",
+  "time" : {
+    "start" : 1604395762513,
+    "stop" : 1604395762533,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "3c46103fa890d7b4",
+  "name" : "修改敏感词20字节英文",
+  "time" : {
+    "start" : 1604395761544,
+    "stop" : 1604395761569,
+    "duration" : 25
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8025719ec78cdb91",
+  "name" : "content包含特殊字符",
+  "time" : {
+    "start" : 1604395762820,
+    "stop" : 1604395762838,
+    "duration" : 18
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "90638f1d0fd000ca",
+  "name" : "新增敏感词20字节中文",
+  "time" : {
+    "start" : 1604395761261,
+    "stop" : 1604395761290,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "37e7751023f1412d",
+  "name" : "messgageCode参数不填",
+  "time" : {
+    "start" : 1604395762108,
+    "stop" : 1604395762132,
+    "duration" : 24
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "74256224a68f142f",
+  "name" : "areas11个",
+  "time" : {
+    "start" : 1604395762190,
+    "stop" : 1604395762219,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "7859cde78c9aa6ed",
+  "name" : "修改敏感词为20字节中文",
+  "time" : {
+    "start" : 1604395761508,
+    "stop" : 1604395761534,
+    "duration" : 26
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "687228821464f501",
+  "name" : "content含有敏感词，中间加空格",
+  "time" : {
+    "start" : 1604395762719,
+    "stop" : 1604395762732,
+    "duration" : 13
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "e150cdafa1f056dd",
+  "name" : "content为空",
+  "time" : {
+    "start" : 1604395762742,
+    "stop" : 1604395762765,
+    "duration" : 23
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "fb8438ed449524b5",
+  "name" : "新增一个终审",
+  "time" : {
+    "start" : 1604395760521,
+    "stop" : 1604395760570,
+    "duration" : 49
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2892b029a7d69ea5",
+  "name" : "敏感词为空",
+  "time" : {
+    "start" : 1604395761397,
+    "stop" : 1604395761435,
+    "duration" : 38
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2f2817f252226c1e",
+  "name" : "不选地区",
+  "time" : {
+    "start" : 1604395762318,
+    "stop" : 1604395762343,
+    "duration" : 25
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "24c64d5178f2fe1",
+  "name" : "areas不在570-580",
+  "time" : {
+    "start" : 1604395762147,
+    "stop" : 1604395762174,
+    "duration" : 27
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "856c8c5d74ff6efc",
+  "name" : "信息录入-冒烟",
+  "time" : {
+    "start" : 1604395761671,
+    "stop" : 1604395761960,
+    "duration" : 289
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "4dddea6f5fbb8f8e",
+  "name" : "终审",
+  "time" : {
+    "start" : 1604395763137,
+    "stop" : 1604395763198,
+    "duration" : 61
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "5c748243eaf8cd03",
+  "name" : "content参数不填",
+  "time" : {
+    "start" : 1604395762783,
+    "stop" : 1604395762803,
+    "duration" : 20
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "ccf33c34a038c5cd",
+  "name" : "已经存在的敏感词",
+  "time" : {
+    "start" : 1604395761373,
+    "stop" : 1604395761386,
+    "duration" : 13
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "64b7a607cc0d138e",
+  "name" : "content含有敏感词",
+  "time" : {
+    "start" : 1604395762694,
+    "stop" : 1604395762706,
+    "duration" : 12
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "86d7ea60da80b83e",
+  "name" : "初审",
+  "time" : {
+    "start" : 1604395762880,
+    "stop" : 1604395763126,
+    "duration" : 246
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "15de9683bf70cd27",
+  "name" : "新增一个初审",
+  "time" : {
+    "start" : 1604395759850,
+    "stop" : 1604395760511,
+    "duration" : 661
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "b2e6cf8fd290aa94",
+  "name" : "新增敏感词20字节数字",
+  "time" : {
+    "start" : 1604395761338,
+    "stop" : 1604395761363,
+    "duration" : 25
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "7e97aeb7c35c15a0",
+  "name" : "content70字符中文",
+  "time" : {
+    "start" : 1604395762543,
+    "stop" : 1604395762563,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "63b25fefdd568258",
+  "name" : "content70字符中英数字混合",
+  "time" : {
+    "start" : 1604395762664,
+    "stop" : 1604395762683,
+    "duration" : 19
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "7aafc834a5e21a02",
+  "name" : "content70字符英文",
+  "time" : {
+    "start" : 1604395762578,
+    "stop" : 1604395762600,
+    "duration" : 22
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "e8b0980a508d0a76",
+  "name" : "新增敏感词20字节英文",
+  "time" : {
+    "start" : 1604395761300,
+    "stop" : 1604395761327,
+    "duration" : 27
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "dda0ee5c48691003",
+  "name" : "areas=580",
+  "time" : {
+    "start" : 1604395762282,
+    "stop" : 1604395762306,
+    "duration" : 24
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "cd6327215b1cc65b",
+  "name" : "信息录入",
+  "time" : {
+    "start" : 1604395762849,
+    "stop" : 1604395762869,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "70be5927f86bcf7e",
+  "name" : "messageCode参数值为空",
+  "time" : {
+    "start" : 1604395762065,
+    "stop" : 1604395762092,
+    "duration" : 27
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "56c2fb3f6989837b",
+  "name" : "新增敏感词1个字符",
+  "time" : {
+    "start" : 1604395760582,
+    "stop" : 1604395761251,
+    "duration" : 669
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "32ea76ae43b97a27",
+  "name" : "修改敏感词为1个字符",
+  "time" : {
+    "start" : 1604395761466,
+    "stop" : 1604395761499,
+    "duration" : 33
+  },
+  "status" : "passed",
+  "severity" : "critical"
+} ]

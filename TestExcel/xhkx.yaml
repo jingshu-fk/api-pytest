@@ -1,0 +1,1030 @@
+# 新华快讯接口用例
+case01:
+  - case_id: case_001
+    interface: 审核人员信息-新增
+    title: 新增一个初审
+    method: post
+    path: /stage-api/deploy/auditmanager
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      name: 阿路
+      role: 0
+      phone: 17857995703
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: truncate table t_auditmanager
+    change_word:
+    module_name: 审核人员管理
+case02:
+  - case_id: case_002
+    interface: 审核人员信息-新增
+    title: 新增一个终审
+    method: post
+    path: /stage-api/deploy/auditmanager
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      name: 阿知
+      role: 1
+      phone: 13000000001
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 审核人员管理
+case03:
+  - case_id: case_003
+    interface: 敏感词维护-冒烟
+    title: 新增敏感词1个字符
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 景
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: truncate table t_sensitive_word
+    change_word:
+    module_name: 敏感词管理
+case04:
+  - case_id: case_004
+    interface: 敏感词维护-新增
+    title: 新增敏感词20字节中文
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 这个世界上能够好好用
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case05:
+  - case_id: case_005
+    interface: 敏感词维护-新增
+    title: 新增敏感词20字节英文
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: DDGEJjkdjeghzhHFKAHG
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case06:
+  - case_id: case_006
+    interface: 敏感词维护-新增
+    title: 新增敏感词20字节数字
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 33333333333333333222
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case07:
+  - case_id: case_007
+    interface: 敏感词维护-新增
+    title: 已经存在的敏感词
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 33333333333333333222
+    excepted:
+      msg: 33333333333333333222 敏感词已存在
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case08:
+  - case_id: case_008
+    interface: 敏感词维护-新增
+    title: 敏感词为空
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord:
+    excepted:
+      msg: 敏感词不能为空
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case09:
+  - case_id: case_009
+    interface: 敏感词维护-新增
+    title: 敏感词参数不填
+    method: post
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 33333333333333333222
+    excepted:
+      msg: 33333333333333333222 敏感词已存在
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case010:
+  - case_id: case_010
+    interface: 敏感词维护-修改
+    title: 修改敏感词为1个字符
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      id: 301
+      sensitiveWord: 马
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: select id from t_sensitive_word where sensitive_word = '这个世界上能够好好用'
+    change_word: id
+    module_name: 敏感词管理
+case011:
+  - case_id: case_011
+    interface: 敏感词维护-修改
+    title: 修改敏感词为20字节中文
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 应急下发测试短信请及
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend:
+      case_010: ["$.id"]
+      body: 1
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case012:
+  - case_id: case_012
+    interface: 敏感词维护-修改
+    title: 修改敏感词20字节英文
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: VGNVJfhbhrjehFHKVNKR
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend:
+      case_010: ["$.id"]
+      body: 1
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case013:
+  - case_id: case_013
+    interface: 敏感词维护-修改
+    title: 修改敏感词20字节数字
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 31333730303030303030
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend:
+      case_010: ["$.id"]
+      body: 1
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case014:
+  - case_id: case_014
+    interface: 敏感词维护-修改
+    title: 修改敏感词为已存在的
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord: 景
+    excepted:
+      msg: 景 敏感词已存在
+      code: 500
+    depend:
+      case_010: ["$.id"]
+      body: 1
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case015:
+  - case_id: case_015
+    interface: 敏感词维护-修改
+    title: 修改敏感词为空
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord:
+    excepted:
+      msg: 敏感词不能为空
+      code: 500
+    depend:
+      case_010: ["$.id"]
+      body: 1
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case016:
+  - case_id: case_016
+    interface: 敏感词维护-修改
+    title: 敏感词参数不填
+    method: put
+    path: /stage-api/deploy/word
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      sensitiveWord:
+    excepted:
+      msg: 敏感词不能为空
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 敏感词管理
+case017:
+  - case_id: case_017
+    interface: 信息录入
+    title: 信息录入-冒烟
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: XHKX_DZ_CDX
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T17:30:31"
+      areas: 570
+      content: 冒烟测试流程。
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: truncate table T_MESSAGE_TASK
+    change_word:
+    module_name: 信息录入
+case018:
+  - case_id: case_018
+    interface: 信息录入-MessageCode
+    title: messageCode不正确
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: PWJFJ
+      beginsTime: "2020-10-13T19:30:31"
+      engTime: "2020-10-14T17:30:31"
+      areas: 570
+      content: 22222222
+    excepted:
+      msg: 操作失败
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case019:
+  - case_id: case_019
+    interface: 信息录入-MessageCode
+    title: messageCode参数值为空
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode:
+      beginsTime: "2020-10-13T19:30:31"
+      engTime: "2020-10-14T19:30:31"
+      areas: 570
+      content: 22222222
+    excepted:
+      msg: 操作失败
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case020:
+  - case_id: case_020
+    interface: 信息录入-MessageCode
+    title: messgageCode参数不填
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T19:30:31"
+      areas: 571
+      content: 2111
+    excepted:
+      msg: 操作失败
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case021:
+  - case_id: case_021
+    interface: 信息录入-areas
+    title: areas不在570-580
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: XHKX_DZK
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T16:30:31"
+      areas: 581
+      content: 177777777
+    excepted:
+      msg: 操作失败
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case022:
+  - case_id: case_022
+    interface: 信息录入-areas
+    title: areas11个
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T17:30:31"
+      areas: 570,571,572,573,574,575,576,577,578,579,580
+      content: 9999999999
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case023:
+  - case_id: case_023
+    interface: 信息录入-areas
+    title: areas=570
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T17:30:31"
+      areas: 570
+      content: 蜀黍
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case024:
+  - case_id: case_024
+    interface: 信息录入-areas
+    title: areas=580
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T15:30:31"
+      areas: 580
+      content: 肥羊
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case025:
+  - case_id: case_025
+    interface: 信息录入-areas
+    title: 不选地区
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:00"
+      engTime: "2020-10-14T18:30:00"
+      areas:
+      content: 不选地区
+    excepted:
+      msg: 操作失败
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case026:
+  - case_id: case_026
+    interface: 信息录入-areas
+    title: areas参数不填
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:22"
+      engTime: "2020-10-14T19:30:31"
+      content: areas参数不填
+    excepted:
+      msg: 操作失败
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case027:
+  - case_id: case_027
+    interface: 信息录入-content
+    title: content1字符中文
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T11:30:31"
+      content: 舒
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case028:
+  - case_id: case_028
+    interface: 信息录入-content
+    title: content1字符英文
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:11"
+      engTime: "2020-10-14T16:30:55"
+      areas: 573
+      content: f
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case029:
+  - case_id: case_029
+    interface: 信息录入-content
+    title: content1字符数字
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T14:30:21"
+      areas: 576
+      content: 5
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case030:
+  - case_id: case_030
+    interface: 信息录入-content
+    title: content70字符中文
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-15T10:30:31"
+      areas: 575
+      content: 新昌气象台时发布：今天夜里到明天阴有时有雨，偏北风到级，温度后天阴到多云。桐庐:今天夜里到明天阴有小雨，东北风级，明天气温桐庐气象发布到明天
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case031:
+  - case_id: case_031
+    interface: 信息录入-content
+    title: content70字符英文
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-16T07:30:31"
+      areas: 578
+      content: JVGNVJfhbhrjehFHKVNKRFifeklofeppvNJCEJFJUHhfvnuehCJJECEJFJUHhfveklofep
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case032:
+  - case_id: case_032
+    interface: 信息录入-content
+    title: content70字符数字
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-14T19:30:31"
+      areas: 572
+      content: 5555555555555557777777777777777777777772222222222222222200000006666666
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case033:
+  - case_id: case_033
+    interface: 信息录入-content
+    title: content70字符中英数字混合
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:00"
+      engTime: "2020-10-14T10:47:00"
+      areas: 579
+      content: 新昌气象台时发布24jj有时有雨kfkennfnfeerttccccccc温度后天阴到多云3333333333333332222222221
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case034:
+  - case_id: case_034
+    interface: 信息录入-content
+    title: content含有敏感词
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:00"
+      engTime: "2020-10-14T15:22:00"
+      areas: 573
+      content: 景
+    excepted:
+      msg: 存在敏感词:景
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case035:
+  - case_id: case_035
+    interface: 信息录入-content
+    title: content含有敏感词，中间加空格
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:00"
+      engTime: "2020-10-14T22:30:00"
+      areas: 573
+      content:  景
+    excepted:
+      msg: 存在敏感词:景
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case036:
+  - case_id: case_036
+    interface: 信息录入-content
+    title: content为空
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:00"
+      engTime: "2020-10-15T08:30:00"
+      areas: 572
+      content:
+    excepted:
+      msg:
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case037:
+  - case_id: case_037
+    interface: 信息录入-content
+    title: content参数不填
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:00"
+      engTime: "2020-10-14T17:10:00"
+      areas: 576
+    excepted:
+      msg: null
+      code: 500
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case038:
+  - case_id: case_038
+    interface: 信息录入-content
+    title: content包含特殊字符
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:41:00"
+      engTime: "2020-10-16T14:17:00"
+      areas: 577
+      content: 2fk~/?$~!
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 0
+    sql:
+    change_word:
+    module_name: 信息录入
+case039:
+  - case_id: case_039
+    interface: 业务流程
+    title: 信息录入
+    method: post
+    path: /stage-api/message/task
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      messageCode: MSKX_DZ
+      beginsTime: "2020-10-13T10:30:31"
+      engTime: "2020-10-15T13:30:00"
+      areas: 579
+      content: 马戏马戏
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: truncate table T_MESSAGE_TASK
+    change_word:
+    module_name: 业务流程
+case040:
+  - case_id: case_040
+    interface: 业务流程
+    title: 初审
+    method: post
+    path: /stage-api/message/reply
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body: [{'taskID': 2243, 'name': '阿路', 'phone': '17857995703', 'role': 0, 'taskContent': '10月12日测试下发'}]
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: select id from T_MESSAGE_TASK
+    change_word: taskId
+    module_name: 业务流程
+case041:
+  - case_id: case_041
+    interface: 业务流程
+    title: 终审
+    method: post
+    path: /stage-api/message/reply
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body: [{'taskID': 2243, 'name': '阿知', 'phone': '13000000001', 'role': 1, 'taskContent': '10月12日测试下发'}]
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: select id from T_MESSAGE_TASK
+    change_word: taskId
+    module_name: 业务流程
+case042:
+  - case_id: case_042
+    interface: 业务流程
+    title: 发布
+    method: put
+    path: /stage-api/message/task/updateStatus
+    headers:
+      Accept: application/json, text/plain, */*
+      Connection: keep-alive
+      Content-Type: application/json;charset=UTF-8
+      Authorization:
+    header_change: Authorization
+    body:
+      taskId: 2243
+      status: 4
+      codeInfo: ["XHKX_DZK"]
+      pushTasksCode: XHKX_DZK
+      content: 10月12日测试下发
+    excepted:
+      msg: 操作成功
+      code: 200
+    depend: {}
+    is_db: 1
+    sql: select id from T_MESSAGE_TASK
+    change_word: id
+    module_name: 业务流程
