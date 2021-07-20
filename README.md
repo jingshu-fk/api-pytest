@@ -8,6 +8,9 @@
 
 整个框架的目录架构如下：
 
+![image](https://user-images.githubusercontent.com/65322530/126270234-c60c1105-193f-44f6-9e57-91429e9d21d8.png)
+
+
 Common：
 
   --assert_re.py：封装断言方法
