@@ -1,6 +1,5 @@
-# API-pytest-func
 
-接口自动化测试框架
+接口自动化测试框架Python+Pytest+request+allure+jenkins的实战
 
 读取excel测试用例，转为yml，接口数据依赖处理，然后发送请求得到结果断言。
 
