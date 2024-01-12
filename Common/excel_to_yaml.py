@@ -1,5 +1,5 @@
 import yaml
-from apiPytest.Common.read_data import ReadExcel
+from Common.read_data import ReadExcel
 
 """
 模块功能：实现从excel用例数据写到yaml文件。

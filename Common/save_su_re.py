@@ -1,6 +1,6 @@
 import json
 import jsonpath
-from apiPytest.Common.source_log import MyLogger
+from Common.source_log import MyLogger
 
 
 # 调用日志模块

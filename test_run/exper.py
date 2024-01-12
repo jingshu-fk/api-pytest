@@ -1,7 +1,7 @@
 import requests
 import json
 
-from apiPytest.Common.read_conf import ReadConfig
+from Common.read_conf import ReadConfig
 
 def get_task():
 

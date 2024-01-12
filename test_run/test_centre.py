@@ -4,16 +4,15 @@ import os
 print(sys.path)
 import pytest
 import allure
-from apiPytest.Common.read_data import *
-from apiPytest.Common.source_log import MyLogger
-from apiPytest.Common.dealrely import DealDepend
-from apiPytest.Common.read_conf import ReadConfig
-from apiPytest.Common.requ_met import request_me
-from apiPytest.Common.save_su_re import SaveSuRe
-from apiPytest.Common.assert_re import AssertRe
-from apiPytest.Common.exec_database import *
-from apiPytest.Common.excel_to_yaml import WriteToYaml
-from apiPytest.Common.clean import PreDo
+from Common.read_data import *
+from Common.dealrely import DealDepend
+from Common.read_conf import ReadConfig
+from Common.requ_met import request_me
+from Common.save_su_re import SaveSuRe
+from Common.assert_re import AssertRe
+from Common.exec_database import *
+from Common.excel_to_yaml import WriteToYaml
+from Common.clean import PreDo
 
 # 读取excel的数据 ---------------------------------------------------------------------------------------------
 # test2 = ReadExcel('../TestExcel/应急云化任务查询.xlsx')
@@ -52,12 +51,12 @@ report_data = conf.read_info('file_path', 'Report')
 report_generate = conf.read_info('file_path', 'Result')
 
 # 数据库初始化
-#db_init = DBHandler(url_as, dbs)
+# db_init = DBHandler(url_as, dbs)
 db_init = None
 # db_init = db_init(url_as, dbs)
 # 测试结果要写入的数据库
-#url_db = conf.read_info('file_path', 'result_base')
-#result_db = DBHandler(url_db, 'mysql')
+# url_db = conf.read_info('file_path', 'result_base')
+# result_db = DBHandler(url_db, 'mysql')
 # 读取数据库表测试数据 ------------------------------------------------------------------------------------------2
 # test3 = ReadDatabase(db_init, run_sql)
 # cases = test3.get_data()
@@ -159,8 +158,8 @@ class TestApiAuto(object):
 
 
 TestApiAuto().run_test()
-#result_db.close_db() # 关闭数据库连接
-#db_init.close_db()
+# result_db.close_db() # 关闭数据库连接
+# db_init.close_db()
 PreDo.mv_file('../TestExcel')
 # if __name__ == '__main__':
 #     TestApiAuto().run_test()

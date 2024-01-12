@@ -1,6 +1,6 @@
 import cx_Oracle
 import pymysql
-from apiPytest.Common.source_log import MyLogger
+from Common.source_log import MyLogger
 """
 1、是否写个类
 2、包含数据库初始化、清除表数据、插入表数据、关闭连接

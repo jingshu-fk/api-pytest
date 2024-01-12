@@ -1,5 +1,5 @@
-from apiPytest.Common.exec_database import DBHandler
-from apiPytest.Common.source_log import MyLogger
+from Common.exec_database import DBHandler
+from Common.source_log import MyLogger
 
 
 logger = MyLogger().create_logger()
